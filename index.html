@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Resume - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .space {
+            margin-top: 20px;
+            /* Adds 20px of vertical space above the element */
+        }
+
+        .hzspace {
+            margin-right: 120px;
+            /* Adds 20px of vertical space above the element */
+        }
+
+        .image-row {
+            display: flex;
+            vertical-align: center;
+            justify-content: space-between;
+            /* this will add equal space between each image */
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 50%;
+            padding: 5px;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            /* Evenly spaces the figures */
+            align-items: center;
+            gap: 20px;
+            /* Adjust the space between figures */
+        }
+
+        .figure {
+            flex: 1;
+            max-width: 30%;
+            /* Ensures each figure is the same size */
+        }
+
+        img {
+            width: 100%;
+            /* Ensures images fit within their containers */
+            height: auto;
+        }
+
+        /* ---------- Slide container (no clash with Bootstrap .container) ---------- */
+        .slide-container {
+            position: relative;
+            max-width: 600px;
+            /* pick any max you like */
+            margin: auto;
+            /* keep carousel centred */
+        }
+
+        /* Bootstrap already makes .img-fluid responsive, we just
+        make sure the slide itself hides/shows cleanly. */
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            /* always fill slide width   */
+            height: auto;
+            /* keep aspect-ratio correct */
+            box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+            border-radius: .5rem;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Start Bootstrap</span>
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profilepic.jpg" alt="">
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#publication">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#Teaching Assitantship">Teaching Assitantship</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+            <div class="my-auto">
+
+                <h1 class="mb-0">S. Tejas</h1>
+                <div class="subheading mb-5" style="text-transform:none">
+                    Doctoral Research Scholar
+                    <a href="mailto:a22ce09007@iitbbs.ac.in">a22ce09007@iitbbs.ac.in</a>
+                </div>
+                <p class="mb-5">
+                    Hi, welcome to my personal website! I am Tejas, a passionate and dedicated doctoral research scholar
+                    at the School
+                    of Infrastructure, Indian Institute of Technology Bhubaneswar, specializing in sustainable
+                    construction materials.
+                    My academic journey has been both enriching and inspiring. I hold a Bachelor’s degree in Civil
+                    Engineering and a
+                    Master’s degree in Structural Engineering, both of which have sparked my curiosity and equipped me
+                    for the
+                    challenges of advanced research. My research focuses on the design and development of
+                    alkali-activated concrete
+                    under the guidance of Prof. Dinakar Pasla. I have been honoured with the prestigious Prime
+                    Minister’s Research
+                    Fellowship (PMRF) to pursue my doctoral studies, with a focus on advancing sustainable construction
+                    materials.
+                    Beyond my research, I am deeply passionate about teaching and knowledge sharing. I’ve had the
+                    privilege of
+                    instructing and mentoring undergraduate students in subjects like Solid Mechanics, Structural
+                    Analysis, and
+                    Construction Materials. I strongly believe that effective teaching and mentorship are integral to a
+                    fulfilling and
+                    impactful academic career. My research interests include Concrete Technology, Durability studies,
+                    Microstructural
+                    characterization,
+                    Waste minimization and utilization, and Repair and rehabilitation. My primary research goal is to
+                    develop sustainable building materials for a wide range of civil
+                    engineering applications. With the construction industry facing increasing pressure to reduce its
+                    carbon
+                    footprint, my current work investigates fully replacing Portland-cement concretes with
+                    alkali-activated alternatives
+                    derived from aluminosilicate-rich industrial by-products and agricultural waste ashes. By leveraging
+                    fly ash, slag, and similar precursors, these materials can dramatically lower CO₂ emissions and help
+                    mitigate the environmental impact of construction projects. I am enthusiastic about advancing the
+                    frontiers of sustainable construction materials and welcome opportunities for research
+                    collaboration—please feel free to connect!
+                </p>
+
+                <ul class="list-inline list-social-icons mb-0">
+
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/tejas-sivakumar-628238168/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://scholar.google.com/citations?user=sPFkK3gAAAAJ&hl=en&authuser=1">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="ai ai-google-scholar fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="https://www.researchgate.net/profile/S-Tejas">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-researchgate fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="space"></div>
+                <div class="container">
+                    <div class="figure">
+                        <img src="img/conc1.jpg" style="width: 55%; height: auto;" alt="Figure 1">
+                    </div>
+                    <div class="figure">
+                        <img src="img/conc2.jpg" style="width: 100%; height: auto;" alt="Figure 2">
+                    </div>
+                    <div class="hzspace"></div>
+                    <div class="figure">
+                        <img src="img/conc3.jpg" style="width: 60%; height: auto;" alt="Figure 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publication">
+            <div class="my-auto">
+                <h2 class="mb-5">Publications</h2>
+                <div id="publicationCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- <ol class="carousel-indicators">
+            <li data-target="#publicationCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#publicationCarousel" data-slide-to="1"></li>
+            <li data-target="#publicationCarousel" data-slide-to="2"></li>
+            <li data-target="#publicationCarousel" data-slide-to="3"></li>
+            <li data-target="#publicationCarousel" data-slide-to="4"></li>
+            <li data-target="#publicationCarousel" data-slide-to="5"></li>
+            <li data-target="#publicationCarousel" data-slide-to="6"></li>
+          </ol> -->
+                    <div class="carousel-inner">
+                        <!-- Publication 1 -->
+                        <div class="carousel-item active">
+                            <div class="text-center">
+                                <img class="d-block mx-auto mb-4" src="img/pub1.jpg" alt="Publication 1"
+                                    style="width: 60%; height: auto;">
+                                <h3>Approach to design sustainable alkali-activated slag recycled aggregate concrete:
+                                    Mechanical and microstructural
+                                    characterization</h3>
+                                <p>There is a steep increase in demand for concrete as the need for infrastructure is
+                                    increasing with a rapid increase in
+                                    urbanization. Consequently, there has been a surging demand for cement across the
+                                    globe. By using alkaline concrete
+                                    activated with ground granulated blast furnace slag (GGBS), cement usage can be
+                                    eliminated in concrete, which addresses
+                                    the issue of CO2 emissions concerned with the cement manufacturing process and
+                                    promotes the use of industrial
+                                    by-products as sustainable building materials. The current study focuses on
+                                    proposing a methodology to design
+                                    sustainable GGBS-based alkali-activated concrete incorporated with 100 % coarse
+                                    recycled coarse aggregates (RCA)
+                                    recovered from construction and demolition (C&D) waste, for various strengths by
+                                    optimizing the mix proportions and
+                                    verifying the same through experiments. From the current study, it is evident that
+                                    this mix design procedure can be
+                                    adopted to design alkali-activated slag recycled aggregate concrete (AASRAC) mixes
+                                    for strengths ranging from 44 MPa to
+                                    85 MPa. The optimum values of alkalinity factor (λ) and NaOH concentration (M) i.e.,
+                                    1.5 and 12, have a significant role
+                                    in the development of high strengths which is attributed to the formation of
+                                    hydrotalcite. Micrographs captured using
+                                    scanning electron microscope (SEM) and energy dispersive X-ray spectroscopy (EDS)
+                                    studies reveal that the alkaline
+                                    binders promote the development of a denser and stronger interfacial transition zone
+                                    (ITZ) that enhances the strength of
+                                    lower AA/B concretes at the microstructural level as Ca/Si ratio is higher for lower
+                                    AA/B concretes. Global warming
+                                    potential (GWP) analysis reveals that the alkali-activated concretes have
+                                    significantly lower GWP compared to
+                                    conventional OPC-based concrete by approximately 2.5 times. The mix-design chart
+                                    proposed in this study may pave the way
+                                    to designing structural grade AASRAC with enhanced performance for the desired
+                                    strength, which may find its application
+                                    in fast-track construction and manufacturing of prefabricated elements.</p>
+                                <a href="https://doi.org/10.1016/j.cscm.2024.e03886" class="btn btn-primary"
+                                    target="_blank">Read
+                                    More</a>
+                            </div>
+                        </div>
+                        <!-- Publication 2 -->
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <img class="d-block mx-auto mb-4" src="img/pub2.png" alt="Publication 2"
+                                    style="width: 75%; height: auto;">
+                                <h3 style="margin-top: 1em;">Influence of agricultural waste ash on the mechanical
+                                    strength of alkali-activated slag recycled aggregate concrete from
+                                    a microstructural perspective</h3>
+                                <p>Using cement-based natural aggregate concretes to meet the increasing infrastructural
+                                    demands has determinantal effects
+                                    on the environment, such as CO2 emissions due to cement manufacturing and
+                                    degradation of natural resources. The present
+                                    study aims to find the optimum replacement content of two agricultural wastes i.e.,
+                                    sugarcane bagasse ash (SBA), and
+                                    rice husk ash (RHA) to be incorporated in alkali-activated slag concrete developed
+                                    from ground granulated blast furnace
+                                    slag (GGBS), along with 100% recycled coarse aggregates (RCA). Four concretes each
+                                    for SBA and RHA were prepared by
+                                    replacing them with GGBS from 5% to 20% at the steps of 5%. Compressive strength and
+                                    water absorption parameters were
+                                    used to evaluate the influence of SBA and RHA in alkali-activated slag recycled
+                                    aggregate concrete (AASRAC) for all
+                                    eight concretes. These macro properties were justified at the micro-level by SEM–EDS
+                                    and XRD analysis. From the present
+                                    study, it was found that 10% SBA (S10) and 10% RHA (R10) replaced with GGBS
+                                    exhibited a maximum strength of 69 MPa and
+                                    66 MPa and minimum water absorption of 1.97% and 2.12% respectively, compared to
+                                    other concretes developed in the study.
+                                    The formation of highly polymerized and condensed products due to enhanced
+                                    reactivity of the precursor and the highest
+                                    Ca/Si and Ca/(Si + Al) for both S10 and R10 mixes resulted in the increased
+                                    structural buildup of the cross-linked
+                                    tobermorite-like structures, leading to the formation of a condensed C-(A)-S-H gel
+                                    structure. Thus, it was concluded
+                                    from the study that the optimum replacement % of SBA and RHA in AASRAC is 10%.</p>
+                                <a href="https://doi.org/10.1007/s41062-024-01651-x" class="btn btn-primary"
+                                    target="_blank">Read
+                                    More</a>
+                            </div>
+                        </div>
+                        <!-- Publication 3 -->
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <img class="d-block mx-auto mb-4" src="img/pub3.png" alt="Publication 3"
+                                    style="width: 70%; height: auto;">
+                                <h3>Assessment of mechanical and durability properties of composite cement-based
+                                    recycled aggregate concrete</h3>
+                                <p>The decade 2014–2024 is known as the sustainable decade, as a result of which there
+                                    is a need to develop eco-friendly
+                                    building materials and adopt sustainable construction practices. Utilizing larger
+                                    proportions of industrial by-products
+                                    reduces the carbon footprint on the environment caused by the cement manufacturing
+                                    process. Also, the demand for natural
+                                    aggregates is surging rapidly, hence recycled aggregates or recycled concrete coarse
+                                    aggregates are being used as an
+                                    alternative to natural aggregates. But there is a lack of studies based on the
+                                    utilization of composite cement (fly ash
+                                    and slag as blending materials) along with 100% recycled concrete aggregates. In the
+                                    present study composite
+                                    cement-based, recycled aggregate concrete is developed for varying water-cement
+                                    ratios of 0.3 to 0.7 for 100%
+                                    replacement of natural aggregates with recycled concrete coarse aggregates. These
+                                    concretes were studied for mechanical
+                                    properties and durability properties like water permeability, chloride ion
+                                    permeability, corrosion resistance and
+                                    resistance to carbonation. It is concluded from the current study that; the
+                                    developed concrete consisting of 100% RCA
+                                    and composite cement exhibits compressive strength between 25 MPa and 60 MPa for
+                                    decreasing w/c from 0.7 to 0.3
+                                    respectively. Also, a well-designed mix with dense aggregate grading, ensures that
+                                    the carbonation exhibited by this
+                                    concrete is negligible and satisfies all the durability requirements. Hence it can
+                                    be employed in the real-time
+                                    construction of buildings.</p>
+                                <a href="https://doi.org/10.1016/j.conbuildmat.2023.131620" class="btn btn-primary"
+                                    target="_blank">Read
+                                    More</a>
+                            </div>
+                        </div>
+                        <!-- Publication 4 -->
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <!-- <img class="d-block mx-auto mb-4" src="img/"
+                                    alt="Publication 4" style="width: 65%; height: auto;"> -->
+                                <h3>Utilization of bauxite residue as fine aggregate for the development of structural
+                                    concrete: An approach towards
+                                    sustainable construction materials</h3>
+                                <p>Contemporary society has witnessed a significant surge in construction activities to
+                                    cater to the expanding needs of the
+                                    populace. The scarcity of natural resources has resulted in a predicament for the
+                                    construction industry, as it
+                                    encounters difficulties in obtaining high-grade fine aggregates. The present study
+                                    investigates the feasibility of using
+                                    bauxite residue (BR) as a partial replacement of natural sand for fine aggregates,
+                                    to develop structural concrete. The
+                                    first phase of the present study aims to find the optimum replacement content of BR
+                                    as a partial replacement for natural
+                                    sand as fine aggregates. In the second phase, a wide spectrum of concrete consisting
+                                    of 20 % optimum BR content as fine
+                                    aggregates (BRC20 concrete) with a w/c ratio ranging from 0.3 to 0.8 was developed,
+                                    and their mechanical and long-term
+                                    performance was investigated. It was observed that BRC20 concretes exhibited a
+                                    strength 1.2 times higher than the
+                                    control concrete mix due to the development of a dense microstructure and increased
+                                    particle packing. Substitution of BR
+                                    as fine aggregates in concrete is a viable option for structural concrete as all the
+                                    test results fall within the
+                                    prescribed limits outlined by the various codes of practice. These BRC20 concretes
+                                    find their application in mainstream
+                                    construction activities such as the construction of structural members for
+                                    residential buildings. Applications extend to
+                                    self-compacting concrete, where red mud acts as a viscosity-modifying agent, and in
+                                    the production of concrete blocks
+                                    and pavers for non-structural uses. These applications not only address
+                                    environmental concerns associated with red mud
+                                    disposal but also promote the development of innovative and eco-friendly
+                                    construction materials.</p>
+                                <a href="https://doi.org/10.1016/j.cscm.2025.e04348" class="btn btn-primary"
+                                    target="_blank">Read
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <!-- Publication 5 -->
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <img class="d-block mx-auto mb-4" src="img/pub5.png" alt="Publication 5"
+                                    style="width: 60%; height: auto;">
+                                <h3>Characteristics of crushed and alternative fine aggregates based on flow, shear and
+                                    impact behaviour</h3>
+                                <p>Crushed sand has been found to be an excellent replacement for river sand as the
+                                    latter is not readily available. As a
+                                    part of sustainable construction methods and practices, industrial by- products such
+                                    as copper slag, cinder etc., can be
+                                    used as alternative sands. In this work, an attempt has been made to study the
+                                    performance of crushed stone sand for its
+                                    flow properties based on large sample analysis. For this, 30 samples of crushed sand
+                                    were procured from different
+                                    sources. In addition, few alternative sands were also considered for the analysis
+                                    which included copper slag, Ennore
+                                    sand and two types of cinders. The parameters tested are flow time based on New
+                                    Zealand flow cone, loose bulk density,
+                                    uncompacted voids and specific gravity. In order to enhance the performance of the
+                                    poor crushed sand, different samples
+                                    of crushed sands were blended which results in acceptable flow characteristics.
+                                    Similar exercise was done for
+                                    alternative sands by considering double or triple blending which finally resulted in
+                                    good flow properties for possible
+                                    use in concrete. In addition, few samples were also tested and evaluated for their
+                                    shear and impact behaviour.
+                                    Conclusions are drawn based on the results obtained.</p>
+                                <a href="http://op.niscair.res.in/index.php/IJEMS/article/view/40122"
+                                    class="btn btn-primary" target="_blank">Read
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <!-- Publication 6 -->
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <img class="d-block mx-auto mb-4" src="img/pub6.png" alt="Publication 6"
+                                    style="width: 60%; height: auto;">
+                                <h3>Performance evaluation of crushed stone sand for its characterization based on large
+                                    sample analysis</h3>
+                                <p>In the present work and attempt has been made to characterise the crushed stone and
+                                    based on its engineering properties
+                                    and to interpret the result, statically. For this 30 crushed sand samples from
+                                    various sources are collected and tested
+                                    for their properties. Laboratory tests are conducted as per relevant BIS codes of
+                                    practice. Gradation of aggregate is
+                                    characterised by plotting green size distribution curves in Excel software based on
+                                    sieve and analysis tests. For this
+                                    purpose, set of 9 sieves starting from 10 mm to 38 micro meters are used. From these
+                                    curves, various parameters such as
+                                    zoning amount of fine finest modulus, uniformity, coefficient, and coefficient of
+                                    curvature are determined. Amount of
+                                    deleterious materials as function of particles fine than 75 micro meter is
+                                    determined from both wet and dry sieving as
+                                    per the code of practice. In addition, a detailed study is made to understand and
+                                    interpret the saturated and surface
+                                    dry conditions of the aggregate. Based on this condition, the water absorption of
+                                    all samples is determined and the
+                                    results are reported. All results are analyzed, statistically and few conclusions
+                                    are drawn.</p>
+                                <a href="https://www.researchgate.net/publication/350791863_Performance_evaluation_of_crushed_stone_sand_for_its_characterization_based_on_large_sample_analysis"
+                                    class="btn btn-primary" target="_blank">Read
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <!-- Publication 7 -->
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <!-- <img class="d-block mx-auto mb-4"
+                                    src="img/pub" alt="Publication 7"
+                                    style="width: 60%; height: auto;"> -->
+                                <h3>Application of the Internet of Things in the Field of Civil Engineering: A
+                                    State-of-the-Art Review</h3>
+                                <p>The notion of IoT, also known as the Internet of Things, has been there for many
+                                    years, but recent technical progress
+                                    has elevated its prominence. The increasing need for creative ideas, approaches, and
+                                    technology is driven by the fast
+                                    evolution of our world today. The construction sector has enthusiastically adopted
+                                    the IoT as an advanced technology to
+                                    develop intelligent structures, enhance resource efficiency, and manage construction
+                                    expenses. One of the main benefits
+                                    of incorporating IoT into construction operations is the notable advantage of being
+                                    able to gather and analyse real-time
+                                    data. The use of IoT technologies in the construction industry can greatly augment
+                                    productivity and efficiency. This
+                                    review article examines the IoT and its applications in different fields of the
+                                    civil engineering and construction
+                                    industry. It investigates the advantages of IoT in this sector and explores how it
+                                    is implemented.</p>
+                                <a href="http://jestr.org/downloads/Volume17Issue5/fulltext21752024.pdf"
+                                    class="btn btn-primary" target="_blank">Read
+                                    More</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <a class="carousel-control-prev" href="#publicationCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"
+                            style="background-color: rgba(0,0,0,0.5); border-radius: 50%;"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#publicationCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"
+                            style="background-color: rgba(0,0,0,0.5); border-radius: 50%;"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Teaching Assitantship">
+            <!-- <div class="my-auto">
+                <h2 class="mb-5">Teaching Assitantship</h2>
+
+
+
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA in Solid Mechanics</h3>
+                        <div class="subheading mb-3">Indian Institute of Technolgy, Bhubaneswar</div>
+                        <p>I conducted tutorial classes for B.Tech students, covering a range of topics in solid
+                            mechanics, including tensor algebra,
+                            kinematics, and more. These sessions were designed to deepen students' understanding of
+                            complex concepts and enhance their problem-solving
+                            skills in the field of solid mechanics.
+                        </p>
+                    </div>
+
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">July 2024 - Present</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA in CAD lab</h3>
+                        <div class="subheading mb-3">Indian Institute of Technolgy, Bhubaneswar</div>
+                        <p>I conducted tutorial classes for B.Tech students on various software tools used in civil
+                            engineering, including MATLAB, Abaqus, and
+                            others. These sessions focused on equipping students with practical skills and knowledge to
+                            effectively utilize these tools in their
+                            engineering projects.
+                        </p>
+                    </div>
+
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">July 2024 - Present</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA in Design of Concrete Structures (PMRF TA)</h3>
+                        <div class="subheading mb-3">Centurion University of Technology and Management, Bhubaneswar
+                        </div>
+                        <p> I taught a comprehensive course on the design of concrete structures for B.Tech fourth-year
+                            students, covering essential principles
+                            and practical applications to prepare them for advanced challenges in civil engineering.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">January 2024 - April 2024</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA in Advanced Solid Mechanics</h3>
+                        <div class="subheading mb-3">Indian Institute of Technolgy, Bhubaneswar</div>
+                        <p>I conducted tutorial classes for M.Tech students on various topics in solid mechanics,
+                            including tensor algebra, kinematics, and more.
+                            These sessions were designed to provide in-depth knowledge and enhance the analytical skills
+                            required for advanced studies in solid
+                            mechanics.
+                        </p>
+                    </div>
+
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">January 2024 - April 2024</span>
+                    </div>
+
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-3">Class on Matlab (PMRF TA)</h3>
+                        <div class="subheading mb-0">younus college of engineering and technology, Kollam</div>
+                        <div class="subheading mb-3">Thangal Kunju Musaliar Institute of Technology, Kollam</div>
+                        <p>I conducted a tutorial and workshop for B.Tech students titled 'Exploring Scientific
+                            Programming: An Introduction to MATLAB,'
+                            providing foundational skills in MATLAB for scientific and engineering applications.
+                        </p>
+                    </div>
+
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">July 2023 - December 2023</span>
+                    </div>
+
+                </div>
+            </div> -->
+
+            <div class="my-auto">
+                <h2 class="mb-5">Teaching Assistantship &amp; Others</h2>
+
+                <!-- ---------------------------------------------------------------
+                                 CHRONOLOGY (most recent first)
+                            ---------------------------------------------------------------- -->
+
+                <!-- 1. Jan 2025 – Apr 2025 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA – Advanced Concrete Technology (CE6L304)</h3>
+                        <div class="subheading mb-3">Indian Institute of Technology, Bhubaneswar</div>
+                        <p>
+                            Assisted postgraduate instruction, laboratories, and evaluations for the advanced
+                            module on concrete science and technology.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jan&nbsp;2025 – Apr&nbsp;2025</span>
+                    </div>
+                </div>
+
+                <!-- 2. Oct 2024 – Feb 2025 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">PMRF Teaching Deliverables – Lecture Series</h3>
+                        <div class="subheading mb-3">Vidyavardhaka College of Engineering, Mysore</div>
+                        <p>
+                            Delivered full lecture blocks for <em>Materials of Construction &amp; Earth Science</em>,
+                            <em>Research Methodology &amp; IPR</em>, <em>Analysis of Structures</em>,
+                            and <em>Structural Health Monitoring</em>; guest speaker for GATE-2025 awareness session.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Oct&nbsp;2024 – Feb&nbsp;2025</span>
+                    </div>
+                </div>
+
+                <!-- 3. Jul 2024 – Nov 2024 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA – Structural &amp; Advanced Structural Laboratories</h3>
+                        <div class="subheading mb-3">Indian Institute of Technology, Bhubaneswar</div>
+                        <p>
+                            Supervised <em>Advanced Structural Laboratory&nbsp;(CE6P301)</em> and
+                            <em>Structural Engineering Laboratory&nbsp;(CE3P001)</em>; assisted
+                            in <em>Infrastructure Maintenance &amp; Rehabilitation&nbsp;(CE6L308)</em>.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jul&nbsp;2024 – Nov&nbsp;2024</span>
+                    </div>
+                </div>
+
+                <!-- 4. Jan 2024 – Apr 2024 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA – Advanced Concrete Technology &amp; Structural Analysis</h3>
+                        <div class="subheading mb-3">Indian Institute of Technology, Bhubaneswar</div>
+                        <p>
+                            Led problem-solving sessions and grading for
+                            <em>Advanced Concrete Technology&nbsp;(CE6L304)</em> and
+                            <em>Structural Analysis&nbsp;(CE2L004)</em>.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jan&nbsp;2024 – Apr&nbsp;2024</span>
+                    </div>
+                </div>
+
+                <!-- 5. Jan 2024 – Mar 2024 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">PMRF Teaching Deliverables – Tutorials</h3>
+                        <div class="subheading mb-3">Vidyavardhaka College of Engineering, Mysore&nbsp;(Online)</div>
+                        <p>
+                            Conducted tutorials on “Applications of IT and IoT in Civil Engineering” for the
+                            course <em>IT for Civil Engineering</em>, emphasizing contemporary digital workflows.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jan&nbsp;2024 – Mar&nbsp;2024</span>
+                    </div>
+                </div>
+
+                <!-- 6. Oct 2023 – Dec 2023 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">PMRF Teaching Deliverables – Workshop &amp; Lectures</h3>
+                        <div class="subheading mb-3">Vidyavardhaka College of Engineering, Mysore</div>
+                        <p>
+                            Delivered lectures for <em>Materials of Construction &amp; Earth Science</em> and
+                            <em>Research Methodology &amp; IPR</em>; presented workshop talk on
+                            “Process of Writing Technical Papers” (22&nbsp;Dec&nbsp;2023).
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Oct&nbsp;2023 – Dec&nbsp;2023</span>
+                    </div>
+                </div>
+
+                <!-- 7. Jul 2023 – Nov 2023 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA – Structural &amp; Advanced Structural Laboratories</h3>
+                        <div class="subheading mb-3">Indian Institute of Technology, Bhubaneswar</div>
+                        <p>
+                            Facilitated <em>Advanced Structural Laboratory&nbsp;(CE6P301)</em> and
+                            <em>Structural Engineering Laboratory&nbsp;(CE3P001)</em>; supported
+                            <em>Infrastructure Maintenance &amp; Rehabilitation&nbsp;(CE6L308)</em>.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jul&nbsp;2023 – Nov&nbsp;2023</span>
+                    </div>
+                </div>
+
+                <!-- 8. Jan 2023 – Apr 2023 ------------------------------------- -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">TA – Advanced Concrete Technology &amp; Structural Analysis</h3>
+                        <div class="subheading mb-3">Indian Institute of Technology, Bhubaneswar</div>
+                        <p>
+                            Supported course delivery, tutorials, and assessment for
+                            <em>Advanced Concrete Technology&nbsp;(CE6L304)</em> and
+                            <em>Structural Analysis&nbsp;(CE2L004)</em>, ensuring rigorous academic standards.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jan&nbsp;2023 – Apr&nbsp;2023</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+            <!-- <div class="my-auto">
+                <h2 class="mb-5">Education</h2>
+
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Indian Institute of Technolgy, Bhubaneswar</h3>
+                        <div class="subheading mb-0">Research Scholar</div>
+                        <div class="subheading mb-3">Structural Engineering</div>
+                        <div class="subheading mb-3">Tentative thesis title: Novel mode-dependent phase field models for
+                            fracture and fatigue failure in solids</div>
+                        <p>This study introduces a consistent mode-dependent phase-field model (PFM) for brittle failure
+                            under both mechanical and electro-mechanical
+                            loading conditions. The proposed framework will facilitate the topology optimization of
+                            smart materials, aiming to minimize structural
+                            weight while enhancing fracture strength. Currently, a mode-dependent PFM for brittle
+                            fracture under mechanical loads is developed by
+                            proposing mode-factor dependent degradation functions that incorporate the effect of two
+                            additional fracture parameters, namely the
+                            mode-II critical energy release rate and mode-II fracture strength, on the overall
+                            mechanical response. Using the proposed mode-factor
+                            dependent degradation functions and employing a recently proposed modified strain
+                            decomposition scheme, analytical expressions for the
+                            mode-I and mode-II fracture strengths are provided corresponding to the mode-dependent parts
+                            of the elastic energy. Mode-dependent
+                            driving forces are proposed by adopting a modified Benzeggagh-Kenane (B-K) criteria and
+                            deriving expressions for the critical energy
+                            release rate corresponding to individual fracture modes. The proposed model provides a
+                            consistent coupling between the different
+                            fracture modes and can thus predict fracture for all possible mode-mixity ratios. A
+                            parametric study is carried out to unravel the
+                            effect of mixed-mode fracture parameters on the mechanical response of isotropic materials
+                            by considering a few representative
+                            numerical examples. The numerical results from the proposed model show an excellent
+                            agreement with experimental results reported
+                            in the literature. Moreover, results have been generated for the case of fatigue failure in
+                            materials under mechanical and
+                            electro-mechanical loading conditions, which can be extended for the development of
+                            mode-dependent fracture models.
+                            The fatigue effect has been characterized by introducing a degradation function that
+                            regulates the evolution of the phase
+                            field variable. The obtained results under both cyclically applied displacement and electric
+                            potential are demonstrated.
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">July 2022 - Present</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Indian Institute of Technolgy, Bhubaneswar</h3>
+                        <div class="subheading mb-0">M.Tech</div>
+                        <div class="subheading mb-3">Structural Engineering</div>
+                        <div class="subheading mb-3">Thesis title: Novel continuum approaches for modeling material
+                            interfaces and brittle fracture </div>
+                        <p>The development of high-performance bio-inspired composites is one of the contemporary topics
+                            of research interest. Experiments on
+                            composites made of constituents with contrasting material properties and thus possessing a
+                            distinct material interface have shown
+                            very promising results in terms of having high strength and high toughness. To the best of
+                            author's knowledge, although several analytical
+                            studies on the functionally graded in-homogeneous plates with material properties varying in
+                            exponential or power series manner are
+                            available in the literature, there is no analytical method to find a closed-form solution
+                            for composites with a distinct material
+                            interface. Because of the unavailability of analytical methods, finite element solutions are
+                            extensively used for the analysis of these
+                            problems. However, validation of the finite element solution for composites with material
+                            interface against benchmark problems will
+                            increase the confidence. In this work, a diffused material interface-based novel method is
+                            proposed for finding analytical solutions
+                            for the elastic deformation in composites with in-plane homogeneity that can be used as
+                            benchmark problems for the validation of the
+                            finite element solutions. In the proposed analytical method, the material interface is
+                            diffused using a Gaussian kernel function and
+                            derived expressions for the material properties that are smooth, i.e, functions and their
+                            derivatives are continuous, in the entire
+                            domain. The Galerkin method is used to solve the governing partial differential equations
+                            for the derived smooth material properties.
+                            The efficacy of the proposed analytical approach is demonstrated through illustrative
+                            examples on the composite bar, beam, and plates
+                            with in-plate inhomogeneities. Also, a combined diffused material interface and hybrid
+                            phase-field model is proposed for
+                            modeling micro-fracture evolution in heterogeneous composites. Here, analytical expressions
+                            for the regularized properties at the
+                            material interface are derived from the matrix and inclusions properties by using a recently
+                            proposed diffused material interface
+                            method. To model de-bonding at the material interface or cracks in the matrix or inclusion,
+                            the phase-field model, a continuum diffused
+                            crack approach, that provides the crack path as a solution to partial differential equations
+                            is used and thus bypasses the requirement
+                            of tracking individual cracks, enrichment of shape-functions or re-meshing during crack
+                            propagation. An open-source implementation of
+                            the proposed combined model is proposed using a recently developed finite element toolbox,
+                            Gridap in Julia. The proposed model and its
+                            implementation is validated against experimental results on complicated de-bonding and
+                            kinking micro-crack paths in quasi-brittle
+                            materials.</p>
+                        <p>Grade: 9.43</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">July 2020 - May 2022</span>
+                    </div>
+                </div>
+
+            </div> -->
+            <div class="my-auto">
+                <h2 class="mb-5">Education</h2>
+
+                <!-- 1. Doctor of Philosophy · July 2022 – Present -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Indian Institute of Technology, Bhubaneswar</h3>
+                        <div class="subheading mb-0">Doctor of Philosophy</div>
+                        <div class="subheading mb-3">Structural Engineering</div>
+                        <div class="subheading mb-3">
+                            Tentative dissertation title:&nbsp;Development and performance evaluation of
+                            agricultural&nbsp;waste&nbsp;ash-based alkali-activated recycled aggregate concrete
+                        </div>
+                        <p>
+                            Coursework CGPA&nbsp;9.42. Research focuses on designing sustainable high-performance
+                            concrete
+                            using recycled aggregates and alkaline activators derived from agricultural waste ash,
+                            aiming to
+                            lower embodied carbon while enhancing mechanical strength and durability.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">July&nbsp;2022 – Present</span>
+                    </div>
+                </div>
+
+                <!-- 2. Master of Technology · July 2020 – May 2022 -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Indian Institute of Technology, Bhubaneswar</h3>
+                        <div class="subheading mb-0">M.Tech</div>
+                        <div class="subheading mb-3">Structural Engineering</div>
+                        <div class="subheading mb-3">
+                            Thesis title:&nbsp;Study on the mechanical and durability properties of composite
+                            cement-based recycled aggregate concrete
+                        </div>
+                        <p>
+                            CGPA&nbsp;9.36. Investigated the synergistic effects of mineral admixtures on recycled
+                            aggregate
+                            concrete, establishing mix designs that balance strength, stiffness, and long-term
+                            durability
+                            under aggressive environments.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">July&nbsp;2020 – May&nbsp;2022</span>
+                    </div>
+                </div>
+
+                <!-- 3. Bachelor of Engineering · Aug 2015 – Jun 2019 -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Sri Jayachamarajendra College of Engineering</h3>
+                        <div class="subheading mb-0">B.E.</div>
+                        <div class="subheading mb-3">Civil Engineering</div>
+                        <div class="subheading mb-3">
+                            Thesis title:&nbsp;Analysis and design of multi-story composite structure
+                        </div>
+                        <p>
+                            CGPA&nbsp;9.80. Undertook finite-element-based design of steel-concrete composite frames in
+                            seismic
+                            zones. Add-on project:&nbsp;Characterization of crushed stone aggregates to optimize grading
+                            and
+                            angularity for high-strength concrete mixes.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Aug&nbsp;2015 – Jun&nbsp;2019</span>
+                    </div>
+                </div>
+
+                <!-- 4. Higher Secondary · Jun 2013 – Apr 2015 -->
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Sri Raghavendra Gurukula Vidyapeetha College, Mysuru</h3>
+                        <div class="subheading mb-0">Higher Secondary (Pre-University)</div>
+                        <div class="subheading mb-3">Science Stream</div>
+                        <p>
+                            Percentage&nbsp;93.83&nbsp;%. Core curriculum in Physics, Chemistry and Mathematics laid the
+                            foundation for subsequent civil and structural engineering studies.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jun&nbsp;2013 – Apr&nbsp;2015</span>
+                    </div>
+                </div>
+
+                <!-- 5. Secondary School Examination · May 2013 -->
+                <div class="resume-item d-flex flex-column flex-md-row">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Manasarowar Pushksrini Vidyashrama (CBSE), Mysuru</h3>
+                        <div class="subheading mb-3">Secondary School Examination (Class X)</div>
+                        <p>
+                            CGPA&nbsp;10.0. Achieved perfect grade point average, earning proficiency awards in
+                            Mathematics
+                            and Science.
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">May&nbsp;2013</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+            <!-- <div class="my-auto">
+                <h2 class="mb-5">Skills</h2>
+
+                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Julia
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Matlab
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Mathematica
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Abaqus
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        STAAD.pro
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        ETABS
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        MS Office
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        LaTeX
+                    </li>
+
+                </ul>
+                <div class="container">
+                    <div class="figure">
+                        <img src="img/juliaNew.png" style="width:75%" alt="Figure 1">
+                    </div>
+                    <div class="figure">
+                        <img src="img/matlab.jpg" alt="Figure 2">
+                    </div>
+                    <div class="figure">
+                        <img src="img/wolframmathematica.jpg" alt="Figure 3">
+                    </div>
+                    <div class="figure">
+                        <img src="img/ETABSlogo.png" alt="Figure 4">
+                    </div>
+                    <div class="figure">
+                        <img src="img/Staadpro.png" alt="Figure 5">
+                    </div>
+                </div>
+            </div> -->
+            <div class="my-auto">
+                <h2 class="mb-5">Skills</h2>
+
+                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+                <ul class="fa-ul mb-0">
+                    <li><i class="fa-li fa fa-check"></i>STAAD.pro</li>
+                    <li><i class="fa-li fa fa-check"></i>ETABS</li>
+                    <li><i class="fa-li fa fa-check"></i>SAFE</li>
+                    <li><i class="fa-li fa fa-check"></i>SAP</li>
+                    <li><i class="fa-li fa fa-check"></i>AutoCAD</li>
+                    <li><i class="fa-li fa fa-check"></i>MS&nbsp;Office</li>
+                    <li><i class="fa-li fa fa-check"></i>Abaqus</li>
+                    <li><i class="fa-li fa fa-check"></i>MATLAB</li>
+                    <li><i class="fa-li fa fa-check"></i>Julia</li>
+                </ul>
+
+                <!-- Logos / Illustrative Icons ------------------------------------>
+                <div class="container mt-4">
+                    <div class="figure"><img src="img/Staadpro.png" alt="STAAD.pro logo"></div>
+                    <div class="figure"><img src="img/ETABSlogo.png" alt="ETABS logo"></div>
+                    <div class="figure"><img src="img/SAPlogo.png" alt="SAP2000 logo"></div>
+                    <div class="figure"><img src="img/AutoCADlogo.png" alt="AutoCAD logo"></div>
+                    <div class="figure"><img src="img/MSOffice.png" alt="MS Office logo"></div>
+                    <div class="figure"><img src="img/Abaquslogo.png" alt="Abaqus logo"></div>
+                    <div class="figure"><img src="img/matlab.jpg" alt="MATLAB logo"></div>
+                    <div class="figure"><img src="img/juliaNew.png" style="width:75%" alt="Julia logo"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+            <div class="my-auto">
+                <h2 class="mb-5">Interests</h2>
+                <p>My primary interest is rooted to develop sustainable building materials which are used in various
+                    civil engineering
+                    applications. The decade 2014-2024 is known as the sustainable decade, there is a huge demand for
+                    the development of
+                    sustainable materials and adopt sustainable construction practices. My current research deals with
+                    the studies related
+                    to replacing Portland cement-based concretes completely with alkali-activated concretes, developed
+                    by alkali activation
+                    methods, which utilizes aluminosilicate-rich precursors derived from industrial byproducts and
+                    agricultural waste ashes.
+                    The main focus of the current research is to significantly lower CO2 emissions as alkali-activated
+                    materials utilize
+                    industrial by-products such as fly ash or slag, which have a much lower carbon footprint. Using
+                    alkali-activated
+                    materials in construction projects can help mitigate the environmental impact of the construction
+                    industry and
+                    contribute to global efforts to reduce greenhouse gas emissions.
+                </p>
+                <p class="mb-0">Beyond research, I am fervent about pursuits that enhance both physical and mental
+                    well-being. I am passionate about
+                    playing lawn tennis, badminton and cricket. Walking and cycling provide a revitalising method to
+                    maintain physical
+                    activity and engage with the natural environment. Rom-Com movies serve as a source of amusement for
+                    me. Eventually,
+                    listening to melodious music serves as a perpetual companion, providing both calm and inspiration
+                    for creativity.
+                </p>
+            </div>
+            <div class="container">
+                <div class="figure">
+                    <img src="img/interest1.png" style="width:75%" alt="Figure 1">
+                </div>
+                <div class="figure">
+                    <img src="img/interest2.png" style="width:75%" alt="Figure 2">
+                </div>
+                <div class="figure">
+                    <img src="img/interest3.png" style="width:75%" alt="Figure 3">
+                </div>
+                <!-- <div class="figure">
+                    <img src="img/CompressionDoubleedgeExp.png" style="width:75%" alt="Figure 4">
+                </div> -->
+            </div>
+        </section>
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+            <!-- <div class="my-auto">
+                <h2 class="mb-5">Achievements &amp; Certifications</h2>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Presented on "Phase-Field Modeling of Fatigue Failure With Orthogonal Decomposition
+                        of Constitutive Models Under Anisotropic Crack Propagation" at 9th European Congress on
+                        Computational Methods in Applied Sciences and Engineering, ECCOMAS 2024, Lisbob, Portugal.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Presented on "A phase-field model for fatigue failure of ceramic laminates under residual stress
+                        field" at 9th International Congress on Computational Mechanics and Simulation, IIT Gandhinagar.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Presented on "A diffused material interface based analytical method for elastic analysis of
+                        composites with in-plane inhomogeneity" 8th International Congress on Computational Mechanics
+                        and Simulation, IIT Indore.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Got seventh rank in B.Tech Civil Engineering from APJ Abdul Kalam University, Kerala, India in
+                        2015-2019 Batch
+                    </li>
+                </ul>
+            </div> -->
+            <div class="my-auto">
+                <h2 class="mb-5">Achievements &amp; Certifications</h2>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Awarded <strong>Prime&nbsp;Minister’s Research Fellowship</strong> by the
+                        Ministry&nbsp;of&nbsp;Education,
+                        Government of India (July&nbsp;2023&nbsp;–&nbsp;July&nbsp;2026).
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Presented a technical paper titled
+                        “<em>Influence of sugarcane bagasse ash content on the strength of alkali-activated slag
+                            concrete
+                            developed with recycled coarse aggregates</em>” at the
+                        <strong>18<sup>th</sup> East Asia-Pacific Conference on Structural Engineering and Construction
+                            (EASEC-18)</strong>, 13–15&nbsp;Nov&nbsp;2024, Chiang&nbsp;Mai, Thailand.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Presented a poster on
+                        “<em>Influence of rice husk ash content on the strength of alkali-activated slag concrete
+                            developed with
+                            recycled coarse aggregates</em>” at the
+                        <strong>10<sup>th</sup> International Conference on CONcrete under SEvere Conditions –
+                            Environment and
+                            Loading&nbsp;(CONSEC-10)</strong>, 25–27&nbsp;Oct&nbsp;2024, IIT&nbsp;Madras, India.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Secured <strong>AIR&nbsp;2508</strong> (GATE&nbsp;Score&nbsp;641) in
+                        <strong>GATE&nbsp;2020</strong>
+                        – Civil Engineering, conducted by IIT Delhi.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check text-warning"></i>
+                        Graduated <strong>3<sup>rd</sup> in class</strong> (B.E. Civil Engineering) from
+                        Sri&nbsp;Jayachamarajendra College of Engineering, Mysuru (Batch&nbsp;2015-2019).
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- <div class="container"> -->
+            <!-- <div class="text-center"> -->
+            <!-- Full-width images with number text -->
+            <!-- <div class="mySlides">
+                        <img src="img/foreign1.jpg" style="width:50%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/foreign2.jpg" style="width:50%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/foreign3.jpg" style="width:50%">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/foreign4.jpg" style="width:50%">
+                    </div> -->
+
+
+            <!-- </div> -->
+            <!-- Next and previous buttons -->
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+            <!-- </div> -->
+            <!-- OLD  -->
+            <!-- <div class="container"> -->
+
+            <!-- NEW  -->
+            <div class="slide-container">
+                <div class="text-center">
+                    <!-- Full-width images -->
+                    <div class="mySlides">
+                        <img src="img/foreign1.jpg" class="img-fluid rounded" alt="Trip 1">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/foreign2.jpg" class="img-fluid rounded" alt="Trip 2">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/foreign3.jpg" class="img-fluid rounded" alt="Trip 3">
+                    </div>
+
+                    <div class="mySlides">
+                        <img src="img/foreign4.jpg" class="img-fluid rounded" alt="Trip 4">
+                    </div>
+                </div>
+
+                <!-- Next / prev buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        /* ---------- BASIC SLIDE-SHOW LOGIC ---------------------------------- */
+        let slideIndex = 0;              // start before first slide
+        let autoTimer = null;           // holds the setInterval handle
+
+        /* show the slide that corresponds to slideIndex                       */
+        function displaySlide() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (const s of slides) { s.style.display = "none"; }
+
+            slideIndex++;                                    // advance pointer
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        /* manual navigation ---------------------------------------------------*/
+        function plusSlides(step) {
+            clearInterval(autoTimer);     // stop auto-loop when user clicks
+            slideIndex += step - 1;       // (-1) offsets the auto-increment
+            displaySlide();
+            autoTimer = setInterval(displaySlide, 4000); // restart auto-loop
+        }
+
+        /* initialise ----------------------------------------------------------*/
+        document.addEventListener("DOMContentLoaded", () => {
+            displaySlide();                          // show first image
+            autoTimer = setInterval(displaySlide, 4000); // change every 4 s
+        });
+    </script>
+
+    <!-- <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script> -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+</body>
+
+</html>
